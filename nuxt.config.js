@@ -4,9 +4,15 @@ export default {
   server: {
     host: '0.0.0.0',
   },
+  router: {
+    // base: '/app/',
+    // routeNameSplitter: '/',
+    // mode: 'hash',
+    trailingSlash: true,
+  },
 
   head: {
-    title: 'Vough Leads',
+    title: 'Caio Fábio - Front-end',
     htmlAttrs: {
       lang: 'en',
     },
@@ -30,13 +36,28 @@ export default {
 
   components: [{ path: '@/components', pathPrefix: false }],
 
-  buildModules: ['@nuxtjs/style-resources', '@nuxtjs/eslint-module'],
+  buildModules: [
+    '@nuxtjs/style-resources',
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/tailwindcss',
+  ],
+  tailwindcss: {
+    jit: true,
+  },
 
   styleResources: {
     scss: './assets/scss/*.scss',
   },
 
-  modules: ['nuxt-i18n'],
+  modules: ['nuxt-i18n', '@nuxt/content'],
+  content: {
+    nestedProperties: ['author.name'],
+    markdown: {
+      prism: {
+        theme: 'prism-themes/themes/prism-material-oceanic.css',
+      },
+    },
+  },
   i18n: {
     locales: ['en'],
     defaultLocale: 'en',
@@ -46,27 +67,6 @@ export default {
         en: {
           home: {
             button: 'See Leads',
-          },
-          leads: {
-            noResults: 'No results...',
-            errorNetwork: 'Contact the Vought support team: (12) 1231-1231',
-            searchText: 'Search',
-          },
-          page404: {
-            text: 'Error 404 - Not found',
-            buttonBack: 'Back home',
-          },
-          modal: {
-            profile: 'Profile',
-            name: 'Name',
-            userName: 'Username',
-            email: 'E-mail',
-            address: 'Address',
-            phone: 'Phone',
-            website: 'Website',
-            company: 'Company',
-            catchPhrase: 'Catch Phrase',
-            category: 'Category',
           },
         },
       },

@@ -14,7 +14,7 @@ export default {
     return {
       links: [
         { name: 'Sobre', to: '/' },
-        { name: 'Blog', to: '/blog' },
+        { name: 'Blog', to: '/blog/' },
       ],
     }
   },
