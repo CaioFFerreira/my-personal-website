@@ -1,33 +1,30 @@
 <template>
-  <article>
-    <h1>{{ article.title }}</h1>
-    <p>{{ article.description }}</p>
+  <Container>
+    <div class="pb-2">
+      <span class="bg-yellow-300 text-black mr-2">Titulo: </span>
+      <h1>{{ article.title }}</h1>
+    </div>
+    <div class="pb-2">
+      <span class="bg-yellow-300 text-black mr-2">Descrição: </span>
+      <p>{{ article.description }}</p>
+    </div>
     <img :src="article.img" :alt="article.alt" />
-    <p>Article last updated: {{ formatDate(article.updatedAt) }}</p>
-
+    <div class="mb-10">
+      <span class="bg-blue-300 text-black mr-2">Criado: </span>
+      <p>{{ formatDate(article.updatedAt) }}</p>
+    </div>
     <nuxt-content :document="article" />
-
-    <author :author="article.author" />
-
-    <prev-next :prev="prev" :next="next" />
-  </article>
+  </Container>
 </template>
 
 <script>
 export default {
+  layout: 'principal',
   async asyncData({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
 
-    const [prev, next] = await $content('articles')
-      .only(['title', 'slug'])
-      .sortBy('createdAt', 'asc')
-      .surround(params.slug)
-      .fetch()
-
     return {
       article,
-      prev,
-      next,
     }
   },
   methods: {

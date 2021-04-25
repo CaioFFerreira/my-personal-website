@@ -51,7 +51,6 @@ export default {
 
   modules: ['nuxt-i18n', '@nuxt/content'],
   content: {
-    nestedProperties: ['author.name'],
     markdown: {
       prism: {
         theme: 'prism-themes/themes/prism-material-oceanic.css',

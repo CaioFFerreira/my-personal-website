@@ -13,8 +13,8 @@ export default {
   data() {
     return {
       links: [
-        { name: 'Sobre', to: '/' },
-        { name: 'Blog', to: '/blog/' },
+        { name: 'Home', to: '/' },
+        { name: 'Blog →', to: '/blog/' },
       ],
     }
   },

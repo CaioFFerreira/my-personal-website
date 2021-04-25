@@ -1,8 +1,14 @@
 <template>
   <main>
     <Header />
-    <Nuxt />
+    <div class="main">
+      <Nuxt />
+    </div>
   </main>
 </template>
 
-<style lang="scss" scoped="true"></style>
+<style lang="scss" scoped="true">
+.main {
+  padding: 40px 0px;
+}
+</style>

@@ -1,9 +1,11 @@
 <template>
   <Container>
-    <div class="header">
-      <Logo />
+    <header class="header">
+      <NuxtLink to="/">
+        <Logo />
+      </NuxtLink>
       <Navigator />
-    </div>
+    </header>
   </Container>
 </template>
 
@@ -16,5 +18,10 @@ export default {}
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: $view-port-medium) {
+    gap: 30px;
+    flex-direction: column;
+  }
 }
 </style>

@@ -1,16 +1,27 @@
 <template>
   <Container>
-    <h1>Blog Posts</h1>
-    {{ articles }}
+    <h1 class="text-xl p-4 font-semibold rounded text-gray-700">Blog Posts</h1>
     <AppSearchInput />
     <ul>
-      <li v-for="article of articles" :key="article.slug" class="post">
+      <li
+        v-for="article of articles"
+        :key="article.slug"
+        class="border-8 p-4 mb-4 border-indigo-200"
+      >
         <NuxtLink :to="`${article.slug}/`">
-          <img :src="article.img" />
+          <img
+            class="img-blog"
+            :src="require('@/assets/images/' + article.img)"
+          />
           <div>
-            <h2>Titulo: {{ article.title }}</h2>
-            <p>by {{ article.author.name }}</p>
-            <p>Descrição {{ article.description }}</p>
+            <div class="pb-4">
+              <span class="bg-yellow-300 text-black mr-2">Titulo: </span>
+              <p>{{ article.title }}</p>
+            </div>
+            <div>
+              <span class="bg-yellow-300 text-black mr-2">Descrição: </span>
+              <p>{{ article.description }}</p>
+            </div>
           </div>
         </NuxtLink>
       </li>
@@ -20,10 +31,11 @@
 
 <script>
 export default {
+  name: 'Blog',
   layout: 'principal',
   async asyncData({ $content, params }) {
     const articles = await $content('articles')
-      .only(['title', 'description', 'img', 'slug', 'author'])
+      .only(['title', 'description', 'img', 'slug'])
       .sortBy('createdAt', 'asc')
       .fetch()
 
@@ -31,13 +43,15 @@ export default {
       articles,
     }
   },
+  head: {
+    title: 'Caio Ferreira - Blog',
+  },
 }
 </script>
 
 <style lang="scss">
-.post {
-  background-color: red;
-  margin-top: 20px;
+.img-blog {
+  max-width: 100px;
   margin-bottom: 20px;
 }
 </style>
