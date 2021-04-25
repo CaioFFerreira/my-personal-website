@@ -8,11 +8,15 @@
       <span class="bg-yellow-300 text-black mr-2">Descrição: </span>
       <p>{{ article.description }}</p>
     </div>
-    <img :src="article.img" :alt="article.alt" />
-    <div class="mb-10">
+    <div class="mb-20">
       <span class="bg-blue-300 text-black mr-2">Criado: </span>
       <p>{{ formatDate(article.updatedAt) }}</p>
     </div>
+    <img
+      class="img-blog"
+      :src="require('@/assets/images/' + article.img)"
+      :alt="article.alt"
+    />
     <nuxt-content :document="article" />
   </Container>
 </template>
@@ -37,6 +41,10 @@ export default {
 </script>
 
 <style>
+.img-blog {
+  max-width: 100px;
+  margin-bottom: 20px;
+}
 .nuxt-content h2 {
   font-weight: bold;
   font-size: 28px;
