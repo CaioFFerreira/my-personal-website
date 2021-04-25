@@ -1,5 +1,5 @@
 export default {
-  ssr: false,
+  ssr: true,
 
   server: {
     host: '0.0.0.0',
