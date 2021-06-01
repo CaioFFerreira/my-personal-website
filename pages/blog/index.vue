@@ -33,7 +33,7 @@
 export default {
   name: 'Blog',
   layout: 'principal',
-  async asyncData({ $content, params }) {
+  async asyncData({ $content }) {
     const articles = await $content('articles')
       .only(['title', 'description', 'img', 'slug'])
       .sortBy('createdAt', 'asc')
@@ -44,8 +44,15 @@ export default {
     }
   },
   head: {
-    title: 'Caio Ferreira - Blog',
+    title: 'CaioFFerreira - Blog',
   },
+  meta: [
+    {
+      hid: 'description',
+      name: 'description',
+      content: 'Dicas de um front-end em constante evolução.',
+    },
+  ],
 }
 </script>
 

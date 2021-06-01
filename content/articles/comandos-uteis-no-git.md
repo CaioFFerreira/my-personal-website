@@ -115,14 +115,5 @@ tag: Git
   ```
     git pull
   ```
-
-  <br>
-  <br>
-  <h2>Atualizando sua branch</h2>
-
-  ```
-    git pull
-  ```
-  
 </template>
 </info-box>

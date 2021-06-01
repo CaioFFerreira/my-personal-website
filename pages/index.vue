@@ -27,15 +27,21 @@
     </div>
 
     <section class="home_grid-2">
-      <tooltip text="Desde 2018">
-        <h1 class="font-bold text-gray-700 pt-10">
-          Front-end Developer and UI
-        </h1>
-      </tooltip>
-      <p class="pt-10">
-        Olá meu nome é Caio Fábio Duarte Ferreira tenho 26 anos, Curso Análise e
-        Desenvolvimento de sistemas , moro em São José dos campos e AMO
-        Front-end.
+      <h1 class="font-bold text-gray-700 pt-10">Front-end Developer and UI</h1>
+      <h3 class="font-bold pt-10">Quem sou eu?</h3>
+      <p class="pt-5">
+        Meu nome é Caio Fábio Duarte Ferreira, tenho 26 anos, moro em São José
+        dos Campos - SP. Gosto bastante de viajar e de aproveitar meu tempo
+        livre com amigos e familiares.
+      </p>
+      <h3 class="font-bold pt-5">o que faço?</h3>
+      <p class="pt-5">
+        Sou desenvolvedor fron-end e UI design, contudo sempre buscando aprender
+        coisas novas.
+      </p>
+      <h3 class="font-bold pt-5">Por que faz?</h3>
+      <p class="pt-5">
+        Gosto de ajudar pessoas a solucionar seus problemas com tecnologia.
       </p>
       <section class="home__social pt-5">
         <a
@@ -104,7 +110,15 @@ export default {
     }
   },
   head: {
-    title: 'Caio Ferreira - Front-end Developer',
+    title: 'CaioFFerreira - Front-end Developer',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Sou desenvolvedor fron-end e UI design, contudo sempre buscando aprender coisas novas.',
+      },
+    ],
   },
   created() {
     this.typeWriter()

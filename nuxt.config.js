@@ -12,9 +12,9 @@ export default {
   },
 
   head: {
-    title: 'Caio Fábio - Front-end',
+    title: 'CaioFFerreira',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'pt-br',
     },
     meta: [
       { charset: 'utf-8' },
@@ -49,7 +49,7 @@ export default {
     scss: './assets/scss/*.scss',
   },
 
-  modules: ['nuxt-i18n', '@nuxt/content'],
+  modules: ['nuxt-i18n', '@nuxt/content', '@nuxtjs/sitemap', '@nuxtjs/robots'],
   content: {
     markdown: {
       prism: {
@@ -70,6 +70,14 @@ export default {
         },
       },
     },
+  },
+  sitemap: {
+    hostname: 'https://www.caiofferreira.com/',
+    routes: ['/blog/'],
+  },
+  robots: {
+    UserAgent: '*',
+    Disallow: '/',
   },
   build: {},
 }

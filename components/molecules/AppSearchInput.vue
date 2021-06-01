@@ -5,7 +5,7 @@
       class="mb-4 mt-4 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-500"
       type="search"
       autocomplete="off"
-      placeholder="Search Articles"
+      placeholder="Buscar artigos"
     />
     <ul v-if="articles.length" class="mb-4 search bg-indigo-100">
       <li
