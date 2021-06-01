@@ -28,17 +28,22 @@
 
     <section class="home_grid-2">
       <h1 class="font-bold text-gray-700 pt-10">Front-end Developer and UI</h1>
-      <a
-        href="http://cssreel.com/Website/desenvolvimento-de-sistemas"
-        target="_blank"
-      >
-        <img
-          class="pt-10 w-28"
-          src="@/assets/images/winner.png"
-          alt="Best site of the day"
-        />
-      </a>
-      <h3 class="font-bold pt-10">Quem sou eu?</h3>
+      <div class="text-center pt-5 pb-10">
+        <a
+          href="http://cssreel.com/Website/desenvolvimento-de-sistemas"
+          target="_blank"
+          style="diplay: inline-block"
+        >
+          <img
+            class="w-30"
+            style="margin: 0 auto"
+            src="@/assets/images/winner.png"
+            title="Best site of the day"
+            alt="Best site of the day"
+          />
+        </a>
+      </div>
+      <h3 class="font-bold pt-5">Quem sou eu?</h3>
       <p class="pt-5">
         Meu nome é Caio Fábio Duarte Ferreira, tenho 26 anos, moro em São José
         dos Campos - SP. Gosto bastante de viajar e de aproveitar meu tempo
