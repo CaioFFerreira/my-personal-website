@@ -28,6 +28,16 @@
 
     <section class="home_grid-2">
       <h1 class="font-bold text-gray-700 pt-10">Front-end Developer and UI</h1>
+      <a
+        href="http://cssreel.com/Website/desenvolvimento-de-sistemas"
+        target="_blank"
+      >
+        <img
+          class="pt-10 w-28"
+          src="@/assets/images/winner.png"
+          alt="Best site of the day"
+        />
+      </a>
       <h3 class="font-bold pt-10">Quem sou eu?</h3>
       <p class="pt-5">
         Meu nome é Caio Fábio Duarte Ferreira, tenho 26 anos, moro em São José
@@ -46,7 +56,7 @@
       <section class="home__social pt-5">
         <a
           v-for="social in sociais"
-          :key="social.name"
+          :key="social.id"
           :href="social.link"
           target="_blank"
         >
@@ -70,16 +80,19 @@ export default {
       title: 'Dev. Front-end - Instruct -',
       sociais: [
         {
+          id: 1,
           name: 'Linkedin',
           link: 'https://www.linkedin.com/in/caio-fabio-duarte-ferreira/',
           img: 'linkedin.svg',
         },
         {
+          id: 2,
           name: 'Facebook',
           link: 'https://www.facebook.com/caiofabio.duarteferreira/',
           img: 'facebook.svg',
         },
         {
+          id: 3,
           name: 'Github',
           link: 'https://github.com/CaioFFerreira',
           img: 'github.svg',
@@ -113,7 +126,6 @@ export default {
     title: 'CaioFFerreira - Front-end Developer',
     meta: [
       {
-        hid: 'description',
         name: 'description',
         content:
           'Sou desenvolvedor fron-end e UI design, contudo sempre buscando aprender coisas novas.',

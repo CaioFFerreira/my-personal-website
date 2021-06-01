@@ -48,7 +48,6 @@ export default {
   },
   meta: [
     {
-      hid: 'description',
       name: 'description',
       content: 'Dicas de um front-end em constante evolução.',
     },
